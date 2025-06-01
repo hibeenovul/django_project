@@ -223,12 +223,151 @@ a
     top: 20px;
     left: 305px;
 }
-.second-frame1
+.second-frame1-background
 {
     display: flex;
     height: 48px;
     width: 1250px;
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 200px;
     place-items: center;
+    display: flex;
+}
+.second-frame1
+{
+    border: 1px solid #b1afaf;;
+    width: 1000px;
+    height: 50px;
+    border-radius: 30px;
+    color: #b1afaf;
+    margin-right: 60px;
+}
+.second-frame1 p
+{
+    margin-left: 20px;
+}
+.second-frame2
+{
+    width: 181px;
+    height: 32px;
+    display: flex;
+    place-items: center;
+}
+.second-frame2a
+{
+    width: 38px;
+    height: 32px;
+}
+.second-frame2b
+{
+    width: 38px;
+    height: 32px;
+    margin-left: 30px;
+}
+.second-frame2c
+{
+    width: 38px;
+    height: 32px;
+    margin-left: 30px;
+}
+.second-frame2a img, .second-frame2b img, .second-frame2c img
+{
+    width: 32px;
+    height: 32px;
+}
+
+.third-frame-background
+{
+    width: 1250px;
+    height: 543px;
+    place-self: center;
+    background-color: #E3EDF84D;
+    display: grid;
+}
+form
+{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+input
+{
+    display: grid;
+    width: 400px;
+    height: 50px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid ;
+    background-color: transparent;
+    outline: none;
+}
+input:focus
+{
+    border-bottom: 2px solid;
+    box-shadow: none;
+}
+
+select
+{
+    display: grid;
+    width: 410px;
+    height: 50px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid;
+    background-color: transparent;
+}
+
+.group1
+{
+    height: 102px;
+    display: flex;
+}
+.first-name span, .last-name span, .email span,
+.phone-number span, .gender span, .state span,
+.linkedin span
+{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: #141E61;
+}
+.last-name, .phone-number, .state
+{
+    margin-left: 250px;
+}
+
+.group2, .group3
+{
+    height: 102px;
+    display: flex;
+}
+.group4
+{
+    margin-top: 10px;
+    height: 102px;
+}
+.linkedin
+{
+    display: grid;
+    margin-top: 0px;
+}
+button
+{
+    margin-left: 100px;
+    height: 50px;
+    width: 250px;
+    background-color: #141E61;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+button span
+{
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
