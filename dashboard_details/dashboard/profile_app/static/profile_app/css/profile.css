@@ -315,8 +315,8 @@ select
     border: none;
     border-bottom: 2px solid;
     background-color: transparent;
+    outline: none;
 }
-
 .group1
 {
     height: 102px;
