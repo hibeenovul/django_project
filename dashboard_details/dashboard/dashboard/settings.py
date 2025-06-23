@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-o=(6*iwqx-3cajqc0c)m5$@^m$%7x9ylhakkvhvl_9ej=#xxiu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+
 ALLOWED_HOSTS = ['dashboard-ixn7.onrender.com', '127.0.0.1', 'localhost']
 
 
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'dashboard_app.apps.DashboardAppConfig',
     'profile_app.apps.ProfileAppConfig',
     'settings_app.apps.SettingsAppConfig',
+    'logout_app.apps.LogoutAppConfig',
     
     'crispy_forms',
     'crispy_bootstrap5',

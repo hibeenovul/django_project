@@ -17,7 +17,7 @@ class UserProfile(models.Model):
     phone_number = PhoneNumberField()
     country = CountryField(blank_label = '(select country)')
     gender = models.CharField(max_length=1,choices=GENDER_CHOICES)
-    state_of_residence = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
     linkedin_profiles = models.URLField()
     
     def __str__(self):

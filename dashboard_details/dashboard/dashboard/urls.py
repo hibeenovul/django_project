@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('dashboard_app.urls')),
     path('profile', include('profile_app.urls')),
     path('settings', include('settings_app.urls')),
+    path('logout', include('logout_app.urls')),
 ]

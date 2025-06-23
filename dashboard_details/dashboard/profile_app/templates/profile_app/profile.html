@@ -21,8 +21,14 @@
                     <div class="profile-picture">
                         <img src="{% static 'dashboard_app/images/profile.png'%}">
                     </div>
-                    <div class="profile-name">Ogamba Chisom</div>
-                    <div class="profile-email">ogambachisom@gmail.com</div>
+                    {% if profile %}
+                    <div class="profile-name">{{profile.first_name}} {{profile.last_name}}</div>
+                    <div class="profile-email">{{profile.email}}</div>
+                    {% else %}
+                    
+                    <div class="profile-name">click profile to update</div>
+                    <div class="profile-email"></div>
+                    {% endif %}
                 </div>
                 <div class="frame2">
                     <div class="dashboard">
@@ -39,21 +45,26 @@
                         <img src="{% static 'dashboard_app/images/chat.png' %}">
                         <p>Chat</p>
                     </div>
-                -->
+               
                     <div class="settings">
                         <a href="{% url 'settings' %}">
                             <img src="{% static 'dashboard_app/images/settings.png' %}">
                             <p>Settings</p>
                         </a>
                     </div>
+                 -->
                     <div class="profile">
                         <img src="{% static 'profile_app/images/user-circle.png' %}">
                         <p>Profile</p>
                     </div>
+                <!--- 
                     <div class="logout">
-                        <img src="{% static 'dashboard_app/images/logout.png' %}">
-                        <p>Logout</p>
+                        <a href="{% url 'logout' %}">
+                            <img src="{% static 'dashboard_app/images/logout.png' %}">
+                            <p>Logout</p>
+                        </a>
                     </div>
+                    -->
                 </div>
             </div>
             <div class="second-frame-background">
@@ -101,8 +112,8 @@
                                 <label for="{{ form.gender.id_for_label }}"><span>Gender</span></label>
                                 {{ form.gender }}
                             </div>
-                            <div class="state">
-                                <label for="{{ form.country.id_for_label }}"><span>State Of Ressidence</span></label>
+                            <div class="country">
+                                <label for="{{ form.country.id_for_label }}"><span>Country Of Residence</span></label>
                                 {{ form.country }}
                             </div>
                         </div>
@@ -110,6 +121,10 @@
                             <div class="linkedin">
                                 <label for="{{ form.linkedin_profiles.id_for_label }}"><span>Linkedin Link</span></label>
                                 {{ form.linkedin_profiles }}
+                            </div>
+                            <div class="state">
+                                <label for="{{ form.state.id_for_label }}"><span>State Of Residence</span></label>
+                                {{ form.state }}
                             </div>
                         </div>
                         <button type="submit"><span>Save</span></button>

@@ -21,8 +21,13 @@
                     <div class="profile-picture">
                         <img src="{% static 'dashboard_app/images/profile.png'%}">
                     </div>
-                    <div class="profile-name">Ogamba Chisom</div>
-                    <div class="profile-email">ogambachisom@gmail.com</div>
+                    {% if profile %}
+                    <div class="profile-name">{{profile.first_name}} {{profile.last_name}}</div>
+                    <div class="profile-email">{{profile.email}}</div>
+                    {% else %}
+                    <div class="profile-name">click profile to update</div>
+                    <div class="profile-email"></div>
+                    {% endif %}
                 </div>
                 <div class="frame2">
                     <div class="dashboard">
@@ -37,13 +42,14 @@
                         <img src="{% static 'dashboard_app/images/chat.png' %}">
                         <p>Chat</p>
                     </div>
-                -->
+                
                     <div class="settings">
                         <a href="{% url 'settings' %}">
                             <img src="{% static 'dashboard_app/images/settings.png' %}">
                             <p>Settings</p>
                         </a>
                     </div>
+                -->
                     <div class="profile">
                         <a href="{% url 'profile' %}">
                             <img src="{% static 'dashboard_app/images/user.png' %}">
@@ -51,8 +57,10 @@
                         </a>
                     </div>
                     <div class="logout">
-                        <img src="{% static 'dashboard_app/images/logout.png' %}">
-                        <p>Logout</p>
+                        <a href="{% url 'logout' %}">
+                            <img src="{% static 'dashboard_app/images/logout.png' %}">
+                            <p>Logout</p>
+                        </a>
                     </div>
                 </div>
             </div>
